@@ -58,15 +58,12 @@ function playGame() {
       humanScore++;
       console.log(`You Win! ${humanChoice} beats ${computerChoice}`);
     } else if (
-        humanChoice === 'scissors' && computerChoice === 'rock' ||
-        humanChoice === 'paper' && computerChoice === 'scissors' ||
-        humanChoice === 'paper' && computerChoice === 'rock' ||
-        humanChoice === 'rock' && computerChoice === 'paper'
+        humanChoice === computerChoice 
     ) {
-      computerScore++;
-      console.log(`You Lose! ${computerChoice} beats ${humanChoice}`);
+      console.log(`It's a draw! You both chose ${humanChoice}`);
     } else {
-      console.log("It's a Tie!")
+      computerScore++;
+      console.log(`You Lose! ${computerChoice} beats ${humanChoice}`)
     }
     rounds++;
 }
@@ -74,8 +71,13 @@ function playGame() {
   while (rounds <= 5) {
     playRound(getHumanChoice(), getComputerChoice());
   }
-
-  console.log(`Game Over! Score --- Human: ${humanScore}, Computer: ${computerScore}`)
+  if (humanScore > computerScore) {
+    console.log(`You Won! Score --- Human: ${humanScore}, Computer: ${computerScore}`)
+  } else if (humanScore === computerScore) {
+    console.log(`It's a Draw! Score --- Human: ${humanScore}, Computer: ${computerScore}`)
+  } else {
+    console.log(`You Lose! Score --- Human: ${humanScore}, Computer: ${computerScore}`)
+  }
 }
 
 // console.log(getComputerChoice());
