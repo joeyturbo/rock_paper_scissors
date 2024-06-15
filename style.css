@@ -1,0 +1,28 @@
+body {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  background-color: #eab676;
+}
+
+.btn-container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.btn {
+  padding: .5rem;
+  background-color: #76b5c5;
+  border: none;
+  border-radius: 10px;
+  font-size: 2rem;
+  color: #063970;
+  box-shadow: 10px 5px 5px #873e23;
+}
+
+.btn:hover {background-color: #1e81b0}
+
+.btn:active {
+  transform: translateY(4px);
+}
