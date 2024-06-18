@@ -25,15 +25,16 @@ function gameReset() {
   computerScore = 0;
   humanScoreDisplay.textContent = humanScore;
   computerScoreDisplay.textContent = computerScore;
+  roundResults.textContent = 'Select below to start the game'
 }
 
 function checkForWinner() {
   if (humanScore === 5 || computerScore === 5) {
     if (humanScore === 5) {
-      roundResults.textContent = `You Won The Game! Final Score - Human: ${humanScore}, Computer: ${computerScore}`
+      alert(`You Won The Game! Final Score - Human: ${humanScore}, Computer: ${computerScore}`)
       gameReset();
     } else {
-      roundResults.textContent = `You Lose :( Final Score - Human: ${humanScore}, Computer: ${computerScore}`;
+      alert(`You Lose :( Final Score - Human: ${humanScore}, Computer: ${computerScore}`)
       gameReset();
 
     }

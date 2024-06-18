@@ -26,7 +26,10 @@ body {
   box-shadow: 10px 5px 5px #873e23;
 }
 
-.btn:hover {background-color: #1e81b0}
+.btn:hover {
+  background-color: #1e81b0;
+  cursor: pointer;
+}
 
 .btn:active {
   transform: translateY(4px);
